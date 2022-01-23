@@ -20,13 +20,13 @@ header {
     left: 0;
     right: 0;
     list-style: none;
-    background-color: rgb(15, 37, 36);
+    background-color: rgb(208, 164, 226);
     z-index:999; 
   }
   
   .navbar a {
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   overflow: hidden;
   text-transform: uppercase;
   font-weight: bold;
@@ -36,14 +36,13 @@ header {
   }
   
   .navbar a:hover {
-    color: rgb(46, 128, 221);
+    color: rgb(46, 221, 125);
   }
   /* End of Nav Bar Styling */
   
   
   /* Jumbotron content styling */
   .jumbotron {
-      background-image: url('../../images/BellyButton.PNG');
       background-size: 100% 100%;
       text-align: center;
       font-weight: bold;

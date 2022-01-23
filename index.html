@@ -4,113 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Bellybutton BioDiversity</title>
-  <link 
-    rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-  />
-  <link rel="stylesheet" href="static/css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<!--Header & Navigation -->
 <body>
-<div class="navbar"> 
-    <header>
-      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-        <div class="header"> 
-            <a class="navbar-brand" href="#intro">The Project </a>
-            <a class="navbar-brand" href="#bc">Top 10 Bacteria Found </a>
-            <a class="navbar-brand" href="#bubdoc">Bacteria per Sample </a>
-            <a class="navbar-brand" href="#gmon">Wash Frequency </a>
-        </div> 
-      </nav>  
-    </header>  
-  </div> 
-<!-- Navigation Bar-->      
 
-<!--<body> -->
-  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1 style="color: rgb(17, 88, 97);"><strong>Bellybutton BioDiversity Dashboard</strong></h1>
-        <p style="color: rgb(0, 0, 0);"><strong>Below is a depiction of microbial belly button data related to naval samples of bacteria. This data is being used to identify potential strains for an alternative to industrialized beef.</strong></p>
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Interactive dashboard to visualize top 10 bacterial species that were found per volunteer.</p>
+      </div>
+      <div class="col-md-12 text-center">
+        </p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 text-left">
-        <div id="intro">
-          <br>
-          <h4 style="color:rgb(17, 88, 97);"><strong> This data was collected with the goal of identifying microbial strains of bacteria found in humans that can be used for alternative methods to produce beef. Below are interactive charts to reflect each participants findings in addition to overall bellybutton biodiversity. </strong></h4>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3 text-left">
-        <br>
-        <br>
-        <h4 style="color: rgb(1, 1, 1);"><strong>Select your participant ID # to update each chart: </strong></h4>
-        <br>
+      <div class="col-md-2">
         <div class="well">
-          <h4><strong>Participant ID:</strong></h4>
-
+          <h5>Test Subject ID No.:</h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h2 class="panel-title"><strong>Demographics</strong></h2>
+            <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-9 text-center">
-        <div id="bc"></div>
-        <br>
-        <br>
-        <h3 style="color: rgb(1, 1, 1);"><strong>Top 10 Bacteria Strains found in Overall Data</strong></h3>
-        <br>
+      <div class="col-md-5">
         <div id="bar"></div>
-        <br>
       </div>
-     
-    <!--Bubble Chart-->  
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
     </div>
-    <!--<div margin: 25px></div>-->
-
-      <div class="row">
-      <div class="col-md-12 text-center">
-        <div id="bubdoc"></div>
-        <br>
-        <br>  
-        <h3 style="color:rgb(0, 0, 0);"><strong>Bacteria Names by Quantity</strong></h3>
-        <br>
-        <div id="bubble" align="center"></div>
-        <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
       </div>
-
-  <div class="col-md-12 text-center">
-    <div id="gmon"></div>
-    <br>
-    <br>  
-    <h3 style="color: rgb(0, 0, 0);"><strong>Belly Button Wash Frequency per Week </strong></h3>
-    <br>
-  </div>
-  <div class="col-md-12">
-    <div id="gauge" align="center"></div>
-  </div>
-</div>
-
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="static/js/samples.json"></script>
-  <script src="static/js/charts.js"></script>
+  <script src="chart.js"></script>
 
 </body>
 
